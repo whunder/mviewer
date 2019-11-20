@@ -53,8 +53,8 @@ def decompress(a, b):
         n = r + (r >> 1)
         if (n + 1) >= h:
             break
-        m = a[n + 1]
-        n = a[n]
+        m = ord(a[n + 1])
+        n = ord(a[n])
         p = (m << 4 | n >> 4) if r & 1 else ((m & 15) << 8 | n)
         if p < g:
             if 256 > p:
